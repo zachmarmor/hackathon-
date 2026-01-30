@@ -1,4 +1,4 @@
-class Herbe:
+class Grass:
     def __init__(self, state:int, eaten: bool, time_growth: str):
         self.state = state
         self.eaten = eaten
@@ -10,7 +10,11 @@ class Animal:
     energy: int
 
 class Sheep(Animal):
-    pass
+    def reproduction(self) -> None:
+        if self.energy > main.seuil:
+            self.energy += -20
+
+
 
 class Wolf(Animal):
     pass
